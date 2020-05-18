@@ -276,7 +276,7 @@
                 phone = '+91 ' + phone;
                 link.className = "message-link btn btn-outline-dark btn-block";
                 // loc.appendChild(link);
-            } else if (phone[0] === '+') {
+            } else if (phone[0] === '+' && !phone.includes(",") && !phone.includes("(")) {
                 link.className = "message-link btn btn-outline-dark btn-block";
             } else {
                 link.className = "message-link btn btn-danger btn-block";
