@@ -13,6 +13,7 @@
     <!----Custom Files----->
     <link href="static/assets/css/custom-css/index.css" rel="stylesheet"/>
     <script src="static/assets/js/custom-js/index.js" type="text/javascript"></script>
+    <script src="static/assets/js/custom-js/data.js" type="text/javascript"></script>
 
 
     <!---JQuery----->
@@ -41,10 +42,6 @@
     <!-----Fonts----->
     <link href="https://fonts.googleapis.com/css?family=Akronim&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'webapp/Login/Login_v6/fonts/iconic/css/material-design-iconic-font.min.css' %}">
-    <link rel="stylesheet" type="text/css"
-          href="{% static 'webapp/Login/Login_v6/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
@@ -90,28 +87,35 @@
     <div class="row justify-content-center">
         <div class="col-lg-5 col-12">
             <div class="card-custom mt-2 mt-lg-0 help-card">
-          <div class=" text-center mt-2 mb-3">
-                    <h3 class="font-weight-bold my-3" style="text-align: center">Link Generate</h3>
-              
+                <div class=" text-center mt-2 mb-3">
+                    <h3 class="font-weight-bold my-3" style="text-align: center">CONTACT LIST #1</h3>
 
-          </div>
+
+                </div>
                 <form id="myForm">
-<h6 class="font-weight-bold my-3" style="text-align: center">Add country code Example: <strong>+91</strong> before number.</h6>
-<div class="ml-5 line"></div>
-                    <div class="input-group mb-3 px-lg-3">
-  <input value="+91" class="ml-4 pincode-input-field" id="myInput" type="text" class="form-control" placeholder="Enter Phone" aria-label="Username" aria-describedby="basic-addon1" required>
-<button type="reset" class="btn btn-danger btn-sm pincode-reset-btn" value="Reset"><i
-                                    class="fa fa-times-circle"></i></button>
+                    <h6 class="font-weight-bold my-3" style="text-align: center" hidden>Add country code Example:
+                        <strong>+91</strong> before number.</h6>
+                    <div class="ml-5 line" hidden></div>
+                    <div class="input-group mb-3 px-lg-3" hidden>
+                        <input value="+91" class="ml-4 pincode-input-field" id="myInput" type="text"
+                               class="form-control" placeholder="Enter Phone" aria-label="Username"
+                               aria-describedby="basic-addon1" required>
+                        <button type="reset" class="btn btn-danger btn-sm pincode-reset-btn" value="Reset"><i
+                                class="fa fa-times-circle"></i></button>
                     </div>
                     <div class="input-group mb-3 px-lg-3">
-  <input class="ml-4 pincode-input-field" id="myName" type="text" class="form-control" placeholder="Enter Your Name" aria-label="Username" aria-describedby="basic-addon1" required>
-<button type="reset" class="btn btn-danger btn-sm pincode-reset-btn" value="Reset"><i
-                                    class="fa fa-times-circle"></i></button>
+                        <input class="ml-4 pincode-input-field" id="myName" type="text" class="form-control"
+                               placeholder="Enter Your Name" aria-label="Username" aria-describedby="basic-addon1"
+                               required>
+                        <button type="reset" class="btn btn-danger btn-sm pincode-reset-btn" value="Reset"><i
+                                class="fa fa-times-circle"></i></button>
                     </div>
                     <div class="input-group mb-3 px-lg-3">
                     </div>
                     <div style="text-align: center" class=" mb-3 px-lg-3">
-                        <button class="btn btn-outline-primary" type="submit" style="height: 5em; width: 100%">Generate</button>
+                        <button class="btn btn-outline-primary" type="submit" style="height: 5em; width: 100%">
+                            Generate
+                        </button>
                     </div>
                 </form>
             </div>
@@ -123,13 +127,14 @@
     <div class="row justify-content-center">
         <div class="col-lg-5 col-12">
             <div class="card-custom mt-2 mt-lg-0 help-card">
-          
+
                 <form>
                     <div class="input-group mb-3 px-lg-3">
-                    <h5 class="font-weight-bold my-3" style="text-align: center">Click On Below Link To Send Message</h5>
+                        <h5 class="font-weight-bold my-3" style="text-align: center">Click On Below Link To Send
+                            Message</h5>
 
-<div style="width: 100%" class="text-justify">
-    <a id="gen-message"></a></div>
+                        <div style="width: 100%" class="text-justify">
+                            <a id="gen-message"></a></div>
                     </div>
                 </form>
             </div>
@@ -141,53 +146,75 @@
     <div class="row justify-content-center">
         <div class="col-lg-5 col-12">
             <div class="card-custom mt-2 mt-lg-0 help-card">
-          
+
                 <form>
                     <div class="input-group mb-3 px-lg-3">
-                    <h5 class="text-center font-weight-bold my-3" style="text-align: center !important">Message</h5>
+                        <h5 class="text-center font-weight-bold my-3" style="text-align: center !important">Message</h5>
 
-<div class="description">
-<p>"Dear Sir/Mam, I am ... from URHope- student & alumni group to fight COVID-19. I got your number from IITB alumni compiled COVID-19 volunteers list.</p>
-<p>Kindly see the following message.</p>
-   <br> <p>The <strong>COVID-19 Pandemic</strong>&nbsp;has hugely affected the world, with the underprivileged section bearing its brunt the most. In this time of crisis, a lot of people have come forward to help these worst affected sections.&nbsp;</p>
-<p><br></p>
-<p>&nbsp;We, <strong>alumni and students</strong>&nbsp;from <strong>IIT Bombay</strong>&nbsp;as well as <strong>other institutes</strong>&nbsp;have also banded together to do our bit by developing an interactive website www.urhope.in which can <strong>accelerate support to the ones in need</strong>.</p>
-<p><br></p>
-<p>&nbsp;Check our website as well as the profiles of team members for further details at Urhope.in/team&nbsp;</p>
-<p><br></p>
-<p>&nbsp; <strong>How &nbsp;does URHope help people?</strong></p>
-<p><br></p>
-<p>&nbsp;- <strong>Hyperlocal information</strong> (of all states and UTs) about govt./NGO/Community initiatives regarding food, shelter, hospitals, testing centre, e-passes, helplines etc.&nbsp;</p>
-<p><br></p>
-<p>&nbsp;- Connecting distress calls to <strong>ground volunteers</strong>&nbsp;coming from NGOs/Community organizations providing relief.&nbsp;</p>
-<p><br></p>
-<p>&nbsp;-Support system &nbsp;in <strong>p</strong><strong style="text-align: inherit;">ost pandemic </strong>rehabilitation<span style="text-align: inherit;">&nbsp;</span></p>
-<p><br></p>
-<p>&nbsp; <strong>How can you help us?</strong>&nbsp;&nbsp;</p>
-<p><br></p>
-<p>&nbsp;- <strong>Partner with us</strong> to take this initiative forward&nbsp;</p>
-<p><br></p>
-<p>&nbsp;- <strong>Support and help</strong> in improvement of the interface,data mining and social media further&nbsp;</p>
-<p><br></p>
-<p>&nbsp;- <strong>Donate for improvements</strong>&nbsp;in website, data extraction, server etc at <strong>UPI ID</strong>&nbsp;:farhamemony2012-1@okaxis &nbsp;&nbsp;</p>
-<p><br></p>
-<p>&nbsp;- <strong>Join as volunteer/group</strong>&nbsp; - increase outreach , <strong>f</strong><strong>ollow us</strong>&nbsp;at:&nbsp;</p>
-<p><br></p>
-<p>&nbsp; instagram.com/urhope_team &nbsp;</p>
-<p><br></p>
-<p>&nbsp;https://facebook.com/URHope.team/&nbsp;</p>
-<p><br></p>
-<p>&nbsp;https://twitter.com/urhope_team/status/1249370486456250370?s=08&nbsp;</p>
-<p><br></p>
-<p>&nbsp;For any <strong>further query</strong>, pls <strong>contact us</strong> at: <strong>farhamemon@iitb.ac.in</strong> <strong>urhope.ngo@gmail.com &nbsp;or at&nbsp;</strong>&nbsp;<strong>918401113300</strong>&nbsp; <strong>Every contribution matters</strong></p>
-<p><br></p>
-<p>&nbsp; May it be your small <strong>Donation</strong>, Your <strong>time</strong>, &nbsp;Your <strong>s</strong><strong>kill</strong>&nbsp;or a simple <strong>LIKE</strong>&nbsp;to our social media handles.&nbsp;</p>
-<p><br></p>
-<p>&nbsp;<strong>Contact person</strong>: <strong>Farha</strong><strong>&nbsp;Memon&nbsp;</strong>(Ph.D Student, IIT Bombay) <strong>Operations Team, URHope</strong></p>
-<p><br></p>
-<p><br></p>
-<p>Thank you for listening to us</p>
-</div>
+                        <div class="description">
+                            <p>"Dear Sir/Mam, I am ... from URHope- student & alumni group to fight COVID-19. I got your
+                                number from IITB alumni compiled COVID-19 volunteers list.</p>
+                            <p>Kindly see the following message.</p>
+                            <br>
+                            <p>The <strong>COVID-19 Pandemic</strong>&nbsp;has hugely affected the world, with the
+                                underprivileged section bearing its brunt the most. In this time of crisis, a lot of
+                                people have come forward to help these worst affected sections.&nbsp;</p>
+                            <p><br></p>
+                            <p>&nbsp;We, <strong>alumni and students</strong>&nbsp;from <strong>IIT Bombay</strong>&nbsp;as
+                                well as <strong>other institutes</strong>&nbsp;have also banded together to do our bit
+                                by developing an interactive website www.urhope.in which can <strong>accelerate support
+                                    to the ones in need</strong>.</p>
+                            <p><br></p>
+                            <p>&nbsp;Check our website as well as the profiles of team members for further details at
+                                Urhope.in/team&nbsp;</p>
+                            <p><br></p>
+                            <p>&nbsp; <strong>How &nbsp;does URHope help people?</strong></p>
+                            <p><br></p>
+                            <p>&nbsp;- <strong>Hyperlocal information</strong> (of all states and UTs) about
+                                govt./NGO/Community initiatives regarding food, shelter, hospitals, testing centre,
+                                e-passes, helplines etc.&nbsp;</p>
+                            <p><br></p>
+                            <p>&nbsp;- Connecting distress calls to <strong>ground volunteers</strong>&nbsp;coming from
+                                NGOs/Community organizations providing relief.&nbsp;</p>
+                            <p><br></p>
+                            <p>&nbsp;-Support system &nbsp;in <strong>p</strong><strong style="text-align: inherit;">ost
+                                pandemic </strong>rehabilitation<span style="text-align: inherit;">&nbsp;</span></p>
+                            <p><br></p>
+                            <p>&nbsp; <strong>How can you help us?</strong>&nbsp;&nbsp;</p>
+                            <p><br></p>
+                            <p>&nbsp;- <strong>Partner with us</strong> to take this initiative forward&nbsp;</p>
+                            <p><br></p>
+                            <p>&nbsp;- <strong>Support and help</strong> in improvement of the interface,data mining and
+                                social media further&nbsp;</p>
+                            <p><br></p>
+                            <p>&nbsp;- <strong>Donate for improvements</strong>&nbsp;in website, data extraction, server
+                                etc at <strong>UPI ID</strong>&nbsp;:farhamemony2012-1@okaxis &nbsp;&nbsp;</p>
+                            <p><br></p>
+                            <p>&nbsp;- <strong>Join as volunteer/group</strong>&nbsp; - increase outreach ,
+                                <strong>f</strong><strong>ollow us</strong>&nbsp;at:&nbsp;</p>
+                            <p><br></p>
+                            <p>&nbsp; instagram.com/urhope_team &nbsp;</p>
+                            <p><br></p>
+                            <p>&nbsp;https://facebook.com/URHope.team/&nbsp;</p>
+                            <p><br></p>
+                            <p>&nbsp;https://twitter.com/urhope_team/status/1249370486456250370?s=08&nbsp;</p>
+                            <p><br></p>
+                            <p>&nbsp;For any <strong>further query</strong>, pls <strong>contact us</strong> at:
+                                <strong>farhamemon@iitb.ac.in</strong> <strong>urhope.ngo@gmail.com &nbsp;or
+                                    at&nbsp;</strong>&nbsp;<strong>918401113300</strong>&nbsp; <strong>Every
+                                    contribution matters</strong></p>
+                            <p><br></p>
+                            <p>&nbsp; May it be your small <strong>Donation</strong>, Your <strong>time</strong>, &nbsp;Your
+                                <strong>s</strong><strong>kill</strong>&nbsp;or a simple <strong>LIKE</strong>&nbsp;to
+                                our social media handles.&nbsp;</p>
+                            <p><br></p>
+                            <p>&nbsp;<strong>Contact person</strong>:
+                                <strong>Farha</strong><strong>&nbsp;Memon&nbsp;</strong>(Ph.D Student, IIT Bombay)
+                                <strong>Operations Team, URHope</strong></p>
+                            <p><br></p>
+                            <p><br></p>
+                            <p>Thank you for listening to us</p>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -195,57 +222,46 @@
     </div>
 </div>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
-    document.getElementById('myForm').addEventListener('submit', function(e){
-  generate();
-  e.preventDefault();
-});
+    document.getElementById('myForm').addEventListener('submit', function (e) {
+        generate();
+        e.preventDefault();
+    });
 
-function generate() {
-const phone = document.getElementById('myInput');
-const name = document.getElementById('myName');
-const loc = document.getElementById('gen-message');
+    function generate() {
+        const name = document.getElementById('myName');
+        for (const i in data) {
+            const phone = data[i];
+            const loc = document.getElementById('gen-message');
 
- const message = `https://api.whatsapp.com/send?phone=${phone.value}&text="Dear%20Sir%2FMam%2C%20I%20am%20${name.value}%20from%20URHope-%20student%20%26%20alumni%20group%20to%20fight%20COVID-19.%20I%20got%20your%20number%20from%20IITB%20alumni%20compiled%20COVID-19%20volunteers%20list.%0A%0AKindly%20see%20the%20following%20message.%0A%0AThe%20*COVID-19%20Pandemic*%20has%20hugely%20affected%20the%20world,%20with%20the%20underprivileged%20section%20bearing%20its%20brunt%20the%20most.%20In%20this%20time%20of%20crisis,%20a%20lot%20of%20people%20have%20come%20forward%20to%20help%20these%20worst%20affected%20sections.%20%0A%0A%20We,%20*alumni%20and%20students*%20from%20*IIT%20Bombay*%20as%20well%20as%20*other%20institutes*%20have%20also%20banded%20together%20to%20do%20our%20bit%20by%20developing%20an%20interactive%20website%20www.urhope.in%20which%20can%20*accelerate%20support%20to%20the%20ones%20in%20need.*%20%0A%20%0A%0A%20Check%20our%20website%20as%20well%20as%20the%20profiles%20of%20team%20members%20for%20further%20details%20at%20Urhope.in/team%20%0A%0A%20%20*How%20%20does%20URHope%20help%20people?*%20%0A%0A%20-%20*Hyperlocal%20information*%20(of%20all%20states%20and%20UTs)%20about%20govt./NGO/Community%20initiatives%20regarding%20food,%20shelter,%20hospitals,%20testing%20centre,%20e-passes,%20helplines%20etc.%20%0A%0A%20-%20Connecting%20distress%20calls%20to%20*ground%20volunteers*%20coming%20from%20NGOs/Community%20organizations%20providing%20relief.%20%0A%0A%20-Support%20system%20%20in%20*post%20pandemic*%20rehabilitation%20%0A%0A%20%20*How%20can%20you%20help%20us?*%20%20%0A%0A%20-%20*Partner%20with%20us*%20to%20take%20this%20initiative%20forward%20%0A%0A%20-%20*Support%20and%20help*%20in%20improvement%20of%20the%20interface,data%20mining%20and%20social%20media%20further%20%0A%0A%20-%20*Donate%20for%20improvements*%20in%20website,%20data%20extraction,%20server%20etc%20at%20*UPI%20ID*%20:farhamemony2012-1@okaxis%20%20%20%0A%0A%20-%20*Join%20as%20volunteer/group*%20%20-%20increase%20outreach%20,%20*follow%20us*%20at:%20%0A%0A%20%20instagram.com/urhope_team%20%20%0A%0A%20https://facebook.com/URHope.team/%20%0A%0A%20https://twitter.com/urhope_team/status/1249370486456250370?s=08%20%0A%0A%20For%20any%20*further%20query*,%20pls%20*contact%20us*%20at:%20*farhamemon@iitb.ac.in*%20*urhope.ngo@gmail.com%20%20or%20at%20*+%20918401113300**%20%20*Every%20contribution%20matters*%20%0A%0A%20%20May%20it%20be%20your%20small%20*Donation*,%20Your%20*time*,%20%20Your%20*skill*%20or%20a%20simple%20*LIKE*%20to%20our%20social%20media%20handles.%20%0A%0A%20*Contact%20person:*%20*Farha%20Memon*%20(Ph.D%20Student,%20IIT%20Bombay)%20*Operations%20Team,%20URHope*%0A%0A%0AThank%20you%20for%20listening%20to%20us`
+            const message = `https://api.whatsapp.com/send?phone=${phone.value}&text="Dear%20Sir%2FMam%2C%20I%20am%20${name.value}%20from%20URHope-%20student%20%26%20alumni%20group%20to%20fight%20COVID-19.%20I%20got%20your%20number%20from%20IITB%20alumni%20compiled%20COVID-19%20volunteers%20list.%0A%0AKindly%20see%20the%20following%20message.%0A%0AThe%20*COVID-19%20Pandemic*%20has%20hugely%20affected%20the%20world,%20with%20the%20underprivileged%20section%20bearing%20its%20brunt%20the%20most.%20In%20this%20time%20of%20crisis,%20a%20lot%20of%20people%20have%20come%20forward%20to%20help%20these%20worst%20affected%20sections.%20%0A%0A%20We,%20*alumni%20and%20students*%20from%20*IIT%20Bombay*%20as%20well%20as%20*other%20institutes*%20have%20also%20banded%20together%20to%20do%20our%20bit%20by%20developing%20an%20interactive%20website%20www.urhope.in%20which%20can%20*accelerate%20support%20to%20the%20ones%20in%20need.*%20%0A%20%0A%0A%20Check%20our%20website%20as%20well%20as%20the%20profiles%20of%20team%20members%20for%20further%20details%20at%20Urhope.in/team%20%0A%0A%20%20*How%20%20does%20URHope%20help%20people?*%20%0A%0A%20-%20*Hyperlocal%20information*%20(of%20all%20states%20and%20UTs)%20about%20govt./NGO/Community%20initiatives%20regarding%20food,%20shelter,%20hospitals,%20testing%20centre,%20e-passes,%20helplines%20etc.%20%0A%0A%20-%20Connecting%20distress%20calls%20to%20*ground%20volunteers*%20coming%20from%20NGOs/Community%20organizations%20providing%20relief.%20%0A%0A%20-Support%20system%20%20in%20*post%20pandemic*%20rehabilitation%20%0A%0A%20%20*How%20can%20you%20help%20us?*%20%20%0A%0A%20-%20*Partner%20with%20us*%20to%20take%20this%20initiative%20forward%20%0A%0A%20-%20*Support%20and%20help*%20in%20improvement%20of%20the%20interface,data%20mining%20and%20social%20media%20further%20%0A%0A%20-%20*Donate%20for%20improvements*%20in%20website,%20data%20extraction,%20server%20etc%20at%20*UPI%20ID*%20:farhamemony2012-1@okaxis%20%20%20%0A%0A%20-%20*Join%20as%20volunteer/group*%20%20-%20increase%20outreach%20,%20*follow%20us*%20at:%20%0A%0A%20%20instagram.com/urhope_team%20%20%0A%0A%20https://facebook.com/URHope.team/%20%0A%0A%20https://twitter.com/urhope_team/status/1249370486456250370?s=08%20%0A%0A%20For%20any%20*further%20query*,%20pls%20*contact%20us*%20at:%20*farhamemon@iitb.ac.in*%20*urhope.ngo@gmail.com%20%20or%20at%20*+%20918401113300**%20%20*Every%20contribution%20matters*%20%0A%0A%20%20May%20it%20be%20your%20small%20*Donation*,%20Your%20*time*,%20%20Your%20*skill*%20or%20a%20simple%20*LIKE*%20to%20our%20social%20media%20handles.%20%0A%0A%20*Contact%20person:*%20*Farha%20Memon*%20(Ph.D%20Student,%20IIT%20Bombay)%20*Operations%20Team,%20URHope*%0A%0A%0AThank%20you%20for%20listening%20to%20us`
 
- const link = document.createElement('a');
- const text = document.createTextNode("This is link"); 
- link.appendChild(text);
- link.className="btn btn-block btn-success"
- link.href= message;
- loc.appendChild(link);
-}
+            const link = document.createElement('a');
+            const text = document.createTextNode(i);
+            link.appendChild(text);
+            link.className = "message-link btn btn-outline-dark btn-block";
+            link.id = "message-link";
+            link.href = message;
+            link.target="_blank";
+            loc.appendChild(link);
+        }
+    }
+    $("a").on('click','.message-link',function () {
+        $(this).removeClass('btn-outline-dark');
+        $(this).addClass('btn-success');
+        $(this).html('<i class="fa fa-check" aria-hidden="true"></i>  ' + $(this).text());
+
+    });
+
 </script>
 
 
 <br/><br/>
 
 <!--   Core JS Files   -->
-<script src="/static/assets/js/core/jquery.min.js" type="text/javascript"></script>
-<script src="/static/assets/js/core/popper.min.js" type="text/javascript"></script>
-<script src="/static/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-<script src="/static/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
-<script src="/static/assets/js/plugins/bootstrap-switch.js"></script>
-<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-<script src="/static/assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
-<script src="/static/assets/js/plugins/moment.min.js"></script>
-<script src="/static/assets/js/plugins/datetimepicker.js" type="text/javascript"></script>
-<script src="/static/assets/js/plugins/bootstrap-datepicker.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>
-    $.getScript('//cdn.jsdelivr.net/isotope/1.5.25/jquery.isotope.min.js', function () {
 
-        /* activate jquery isotope */
-        $('#posts').imagesLoaded(function () {
-            $('#posts').isotope({
-                itemSelector: '.item'
-            });
-        });
-
-    });
-</script>
 </body>
 
 </html>
